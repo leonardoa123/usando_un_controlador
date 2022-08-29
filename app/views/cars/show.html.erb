@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @car.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @car.year %>
+</p>
+
+<p>
+  <strong>Kilometers:</strong>
+  <%= @car.kilometers %>
+</p>
+
+<p>
+  <strong>Max trunk space:</strong>
+  <%= @car.max_trunk_space %>
+</p>
+
+<p>
+  <strong>Current trunk space:</strong>
+  <%= @car.current_trunk_usage %>
+</p>
+
+<p>
+  <strong>Wheel usage:</strong>
+  <%= @car.current_wheel_usage %>
+</p>
+
+<p>
+  <strong>Max wheel usage before change:</strong>
+  <%= @car.max_wheel_usage_before_change %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

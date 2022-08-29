@@ -1,0 +1,57 @@
+<%= form_with(model: car, local: true) do |form| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kilometers %>
+    <%= form.text_field :kilometers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_trunk_space %>
+    <%= form.number_field :max_trunk_space %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_trunk_usage %>
+    <%= form.number_field :current_trunk_usage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_wheel_usage %>
+    <%= form.number_field :current_wheel_usage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_wheel_usage_before_change %>
+    <%= form.text_field :max_wheel_usage_before_change %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
